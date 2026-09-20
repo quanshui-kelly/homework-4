@@ -31,8 +31,10 @@ def create_dominoes_game(rows, cols):
         ans.append(lst)
     return DominoesGame(ans)
 
+
 class DominoesGame(object):
 
+    
     # Required
     def __init__(self, board):
         self.board = board
@@ -84,7 +86,7 @@ class DominoesGame(object):
         for _ in self.legal_moves(vertical):
             return False
         return True
-    
+
     def copy(self):
         new_one = []
         for i in range(self.rows):
@@ -93,7 +95,7 @@ class DominoesGame(object):
                 instance.append(self.board[i][j])
             new_one.append(instance)
         return DominoesGame(new_one)
-    
+
     def successors(self, vertical):
         for move in self.legal_moves(vertical):
             new_game = self.copy()
@@ -214,7 +216,7 @@ feedback_question_1 = """
 """
 
 feedback_question_2 = """
-The last part is kind of difficult, but generally is easier 
+The last part is kind of difficult, but generally is easier
 than previous ones.
 """
 
