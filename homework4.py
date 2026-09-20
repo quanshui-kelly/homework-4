@@ -34,7 +34,6 @@ def create_dominoes_game(rows, cols):
 
 class DominoesGame(object):
 
-    
     # Required
     def __init__(self, board):
         self.board = board
